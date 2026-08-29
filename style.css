@@ -751,3 +751,71 @@ strong,b{ font-weight:700; color:var(--ink); }
 .goals > *, .ct > *, .ct__links > *, .slides > *{ min-width:0; }
 .evi__card, .biz__c, .skcard, .goal, .prob__col{ overflow-wrap:anywhere; }
 .slide{ overflow:hidden; }
+
+/* ---------- 20. ฟอร์มติดต่อ (บันทึกลง Supabase) ---------- */
+.cform{ margin-top:var(--s5); padding-top:var(--s5); border-top:1px solid var(--line); }
+.cform__lb{ font-size:12px; font-weight:600; letter-spacing:.02em; color:var(--ink-3); margin-bottom:var(--s4); }
+.cform__row{ display:grid; grid-template-columns:1fr; gap:var(--s3); }
+@media (min-width:560px){ .cform__row{ grid-template-columns:1fr 1fr; } }
+
+.field{ margin-bottom:var(--s3); min-width:0; }
+.field label{ display:block; font-size:13px; font-weight:600; color:var(--ink-2); margin-bottom:6px; }
+.field input,
+.field textarea{
+  width:100%; font-family:var(--ff); font-size:15px; line-height:1.6; color:var(--ink);
+  background:var(--surface-2); border:1px solid var(--line-2); border-radius:var(--r-s);
+  padding:11px 13px; resize:vertical;
+  transition:border-color .18s var(--ease), background .18s var(--ease), box-shadow .18s var(--ease);
+}
+.field textarea{ min-height:104px; }
+.field input::placeholder,
+.field textarea::placeholder{ color:var(--ink-3); opacity:.8; }
+.field input:hover, .field textarea:hover{ border-color:var(--ink-3); }
+.field input:focus, .field textarea:focus{
+  outline:none; background:var(--surface); border-color:var(--accent);
+  box-shadow:0 0 0 3px var(--accent-soft);
+}
+.field input[aria-invalid="true"], .field textarea[aria-invalid="true"]{ border-color:#c0392b; }
+[data-theme="dark"] .field input[aria-invalid="true"],
+[data-theme="dark"] .field textarea[aria-invalid="true"]{ border-color:#ff8b7a; }
+.field__err{ margin:6px 0 0; font-size:12.5px; color:#c0392b; }
+[data-theme="dark"] .field__err{ color:#ff8b7a; }
+
+/* ช่องหลอกบอท — ต้องไม่ใช้ display:none เพราะบอทบางตัวข้ามช่องที่ซ่อนแบบนั้น */
+.hp{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+
+.cform__foot{ display:flex; flex-wrap:wrap; gap:var(--s3) var(--s4); align-items:center; margin-top:var(--s4); }
+.cform__note{ margin:0; font-size:12px; color:var(--ink-3); flex:1 1 200px; line-height:1.5; }
+
+.fbtn{ position:relative; }
+.fbtn:disabled{ opacity:.65; cursor:not-allowed; transform:none; }
+.fbtn__spin{ display:none; width:14px; height:14px; border-radius:50%;
+  border:2px solid currentColor; border-top-color:transparent; animation:fspin .7s linear infinite; }
+.fbtn.is-loading .fbtn__spin{ display:block; }
+.fbtn.is-loading svg{ display:none; }
+@keyframes fspin{ to{ transform:rotate(360deg); } }
+@media (prefers-reduced-motion:reduce){ .fbtn__spin{ animation-duration:2s; } }
+
+.fstatus{
+  margin:var(--s4) 0 0; padding:11px 14px; border-radius:var(--r-s);
+  font-size:13.5px; line-height:1.6; border:1px solid var(--line);
+}
+.fstatus.is-wait{ background:var(--surface-2); color:var(--ink-2); }
+.fstatus.is-ok{ background:var(--ok-soft); color:var(--ok); border-color:color-mix(in srgb,var(--ok) 34%, transparent); font-weight:600; }
+.fstatus.is-err{ background:var(--accent-soft); color:var(--accent); border-color:color-mix(in srgb,var(--accent) 30%, transparent); }
+
+@media print{ .cform{ display:none!important; } }
+
+/* select ในฟอร์มติดต่อ — ให้หน้าตาเดียวกับ input */
+.field select{
+  width:100%; font-family:var(--ff); font-size:15px; line-height:1.6; color:var(--ink);
+  background:var(--surface-2); border:1px solid var(--line-2); border-radius:var(--r-s);
+  padding:11px 13px; cursor:pointer; appearance:none;
+  background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);
+  background-position:calc(100% - 18px) 21px, calc(100% - 13px) 21px;
+  background-size:5px 5px, 5px 5px;
+  background-repeat:no-repeat;
+  transition:border-color .18s var(--ease), background-color .18s var(--ease), box-shadow .18s var(--ease);
+}
+.field select:hover{ border-color:var(--ink-3); }
+.field select:focus{ outline:none; background-color:var(--surface); border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft); }

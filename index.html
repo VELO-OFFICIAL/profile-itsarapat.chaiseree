@@ -712,6 +712,57 @@ solve(eq, x)
           </button>
         </div>
         <p class="ct__hint">ตอบกลับภายใน 24 ชั่วโมง</p>
+
+        <form class="cform" id="contactForm" novalidate>
+          <p class="cform__lb">หรือฝากข้อความไว้ตรงนี้</p>
+
+          <div class="cform__row">
+            <div class="field">
+              <label for="fName">ชื่อ</label>
+              <input type="text" id="fName" name="name" autocomplete="name" maxlength="120" placeholder="ชื่อของคุณ" required>
+              <p class="field__err" data-err="name" hidden></p>
+            </div>
+            <div class="field">
+              <label for="fContact">ช่องทางติดต่อกลับ</label>
+              <input type="text" id="fContact" name="contact" autocomplete="email" maxlength="200" placeholder="อีเมล หรือ LINE ID" required>
+              <p class="field__err" data-err="contact" hidden></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="fTopic">เรื่องที่ติดต่อ</label>
+            <select id="fTopic" name="product_interest">
+              <option value="">สอบถามทั่วไป</option>
+              <option value="การสมัครเรียน / สัมภาษณ์">การสมัครเรียน / สัมภาษณ์</option>
+              <option value="โปรเจ็ค AI Skills">โปรเจ็ค AI Skills</option>
+              <option value="Put SSR.SHOP">Put SSR.SHOP</option>
+              <option value="อยากให้สาธิตการใช้งาน">อยากให้สาธิตการใช้งาน</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="fMessage">ข้อความ</label>
+            <textarea id="fMessage" name="message" rows="4" maxlength="2000" placeholder="อยากถามเรื่องผลงานส่วนไหนเป็นพิเศษครับ" required></textarea>
+            <p class="field__err" data-err="message" hidden></p>
+          </div>
+
+          <!-- ช่องหลอกบอท: คนจริงมองไม่เห็นและ tab ไม่ถึง -->
+          <div class="hp" aria-hidden="true">
+            <label for="fWebsite">เว้นช่องนี้ไว้</label>
+            <input type="text" id="fWebsite" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="cform__foot">
+            <button class="btn btn--primary fbtn" id="formSubmit" type="submit">
+              <span class="fbtn__spin" aria-hidden="true"></span>
+              <span class="fbtn__t">ส่งข้อความ</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            </button>
+            <p class="cform__note">เก็บเฉพาะข้อมูลที่กรอกในฟอร์ม เพื่อใช้ติดต่อกลับเท่านั้น</p>
+          </div>
+
+          <p class="fstatus" id="formStatus" role="status" aria-live="polite" hidden></p>
+        </form>
       </div>
 
       <ul class="ct__links">
@@ -751,6 +802,8 @@ solve(eq, x)
   </div>
 </footer>
 
+<script src="supabase-config.js"></script>
 <script src="main.js"></script>
+<script src="supabase.js"></script>
 </body>
 </html>
