@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>อิสระพัฒ ชัยเสรี — นักเรียนที่สร้าง AI Skills ใช้งานได้จริง</title>
+<meta name="description" content="พอร์ตโฟลิโอของอิสระพัฒ ชัยเสรี นักเรียนมัธยมต้น ผู้สร้างทีม AI Skills 8 ตัวสำหรับ Claude และเว็บธุรกิจ Put SSR.SHOP ที่เปิดขายจริง">
+<meta name="author" content="อิสระพัฒ ชัยเสรี (Itsarapat Chaiseree)">
+<meta name="theme-color" content="#faf7f2">
+
+<!-- Open Graph — แก้ URL ให้ตรงกับโดเมนจริงหลัง deploy -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="อิสระพัฒ ชัยเสรี — นักเรียนที่สร้าง AI Skills ใช้งานได้จริง">
+<meta property="og:description" content="ทีม AI Skills 8 ตัวสำหรับ Claude + เว็บธุรกิจ Put SSR.SHOP ที่เปิดขายจริง">
+<meta property="og:locale" content="th_TH">
+<meta property="og:image" content="og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23b34a17'/><text x='32' y='45' font-family='monospace' font-size='30' font-weight='700' fill='%23faf7f2' text-anchor='middle'>IC</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "อิสระพัฒ ชัยเสรี",
+  "alternateName": "Itsarapat Chaiseree",
+  "jobTitle": "นักเรียนมัธยมต้น / ผู้พัฒนา AI Skills",
+  "email": "mailto:itsarapat.chaiseree@gmail.com",
+  "knowsAbout": ["Python", "JavaScript", "HTML/CSS", "Prompt Engineering", "AI Skills", "Web Design"],
+  "url": "https://velo-official.github.io/putssr-shop/"
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#hero">ข้ามไปยังเนื้อหาหลัก</a>
+
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<!-- ══════════ NAV ══════════ -->
+<header class="nav" id="nav">
+  <div class="nav__in">
+    <a class="brand" href="#hero">
+      <span class="brand__mark" aria-hidden="true">IC</span>
+      <span class="brand__txt">อิสระพัฒ ชัยเสรี</span>
+    </a>
+
+    <nav class="nav__links" id="navLinks" aria-label="เมนูหลัก">
+      <a href="#about">เกี่ยวกับฉัน</a>
+      <a href="#skills">ทักษะ</a>
+      <a href="#projects">โปรเจ็ค</a>
+      <a href="#journey">เส้นทาง</a>
+      <a href="#future">เป้าหมาย</a>
+      <a href="#contact">ติดต่อ</a>
+    </nav>
+
+    <div class="nav__tools">
+      <button class="icobtn" id="themeBtn" type="button" aria-label="สลับโหมดสว่าง/มืด" title="สลับโหมดสว่าง/มืด">
+        <svg class="ico-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.6M12 19.4V22M2 12h2.6M19.4 12H22M4.9 4.9l1.9 1.9M17.2 17.2l1.9 1.9M19.1 4.9l-1.9 1.9M6.8 17.2l-1.9 1.9"/></svg>
+        <svg class="ico-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.2A8.2 8.2 0 1 1 9.8 4a6.6 6.6 0 0 0 10.2 10.2z"/></svg>
+      </button>
+      <button class="icobtn burger" id="burger" type="button" aria-label="เปิดเมนู" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════ SIDE RAIL (desktop) ══════════ -->
+<aside class="rail" id="rail" aria-hidden="true">
+  <ol>
+    <li><a href="#about" data-r="about"><i>01</i><b>เกี่ยวกับฉัน</b></a></li>
+    <li><a href="#skills" data-r="skills"><i>02</i><b>ทักษะ</b></a></li>
+    <li><a href="#projects" data-r="projects"><i>03</i><b>โปรเจ็คเด่น</b></a></li>
+    <li><a href="#journey" data-r="journey"><i>04</i><b>เส้นทาง</b></a></li>
+    <li><a href="#future" data-r="future"><i>05</i><b>เป้าหมาย</b></a></li>
+    <li><a href="#contact" data-r="contact"><i>06</i><b>ติดต่อ</b></a></li>
+  </ol>
+</aside>
+
+<main>
+
+<!-- ══════════ 00 · HERO ══════════ -->
+<section id="hero" class="hero">
+  <div class="wrap hero__grid">
+
+    <div class="hero__left">
+      <p class="eyebrow" data-reveal>
+        <span class="dot" aria-hidden="true"></span>
+        นักเรียนชั้นมัธยมต้น · กำลังสมัครเรียนต่อสายคอมพิวเตอร์
+      </p>
+
+      <h1 class="hero__name" data-reveal>
+        อิสระพัฒ<br><span class="ol">ชัยเสรี</span>
+      </h1>
+
+      <p class="hero__lede" data-reveal>
+        นักเรียนที่สร้าง <strong>AI Tools ใช้งานได้จริง</strong> —
+        ออกแบบทีม AI Skills 8 ตัวให้ Claude ทำงานเฉพาะทางได้แม่นขึ้น
+        แล้วต่อยอดเป็นเว็บธุรกิจที่เปิดขายจริงบนอินเทอร์เน็ต
+      </p>
+
+      <div class="hero__cta" data-reveal>
+        <a class="btn btn--primary" href="#projects">
+          ดูโปรเจ็คเด่น
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="#contact">ช่องทางติดต่อ</a>
+        <a class="btn btn--link" href="https://velo-official.github.io/putssr-shop/#products" target="_blank" rel="noopener">
+          เปิดเว็บผลงานจริง
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+        </a>
+      </div>
+
+      <dl class="stats" data-reveal>
+        <div><dt>AI Skills ที่ออกแบบเอง</dt><dd><span class="num" data-count="8">8</span></dd></div>
+        <div><dt>เว็บธุรกิจที่ออนไลน์จริง</dt><dd><span class="num" data-count="1">1</span></dd></div>
+        <div><dt>ภาษาโปรแกรมที่ใช้งาน</dt><dd><span class="num" data-count="3">3</span></dd></div>
+      </dl>
+    </div>
+
+    <div class="hero__right" data-reveal>
+      <figure class="term" aria-label="ตัวอย่างการทำงานของ skill math-genius">
+        <figcaption class="term__bar">
+          <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="term__title">claude — math-genius.skill</span>
+        </figcaption>
+        <div class="term__body">
+          <p class="ln ln--user"><span class="who">USER</span>แก้สมการ 2x² − 5x − 3 = 0 พร้อมแสดงวิธีทำ</p>
+          <p class="ln ln--sys"><span class="who">RUN</span>verify.py → sympy.solve()</p>
+          <pre class="ln ln--code"><code>from sympy import symbols, solve
+x = symbols('x')
+solve(2*x**2 - 5*x - 3, x)
+# → [-1/2, 3]</code></pre>
+          <p class="ln ln--ai">
+            <span class="who">CLAUDE</span>
+            แยกตัวประกอบได้ <b>(2x + 1)(x − 3) = 0</b><br>
+            ∴ x = −1/2 หรือ x = 3
+            <span class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg> ตรวจซ้ำด้วยโค้ดแล้ว</span>
+          </p>
+        </div>
+      </figure>
+      <p class="term__note">ผลลัพธ์จริงจากชุดทดสอบที่ผมเขียนขึ้นเอง — ไม่ใช่ภาพจำลอง</p>
+    </div>
+
+  </div>
+  <div class="hero__rule" aria-hidden="true"></div>
+</section>
+
+<!-- ══════════ 01 · ABOUT ══════════ -->
+<section id="about" class="sec">
+  <div class="wrap">
+    <header class="sec__head" data-reveal>
+      <p class="sec__no">§ 01</p>
+      <h2 class="sec__title">เกี่ยวกับฉัน</h2>
+    </header>
+
+    <div class="about">
+      <div class="about__body" data-reveal>
+        <p class="lead">
+          สวัสดีครับ ผมชื่ออิสระพัฒ ตอนนี้เรียนอยู่ชั้นมัธยมต้น
+          และใช้เวลาว่างส่วนใหญ่ไปกับการสร้างเครื่องมือที่ตัวเองอยากใช้จริง
+        </p>
+        <p>
+          จุดเริ่มต้นของผมไม่ได้หวือหวาเลยครับ — ผมแค่รำคาญที่ถาม AI แล้วได้คำตอบกว้างๆ
+          ที่เอาไปใช้ต่อไม่ได้ ถามโจทย์เลขก็ได้คำตอบที่ "น่าจะประมาณนี้"
+          ขอสไลด์ก็ได้แค่ข้อความให้ไปทำต่อเอง ผมเลยเริ่มสงสัยว่า
+          <strong>ถ้าเราเขียนคำสั่งให้มันดีขึ้น มันจะทำงานได้ดีขึ้นแค่ไหน</strong>
+        </p>
+        <p>
+          คำถามนั้นพาผมไปเรียนเรื่อง Prompt Engineering และระบบ Skills ของ Claude
+          จนกลายเป็นโปรเจ็คแรกคือ AI Skills 8 ตัว ที่ผมออกแบบ ทดสอบ และแก้บั๊กเองทั้งหมด
+          พอมันใช้งานได้จริง ผมก็อยากรู้ต่อว่ามันมีค่าพอให้คนอื่นจ่ายเงินไหม
+          เลยลงมือทำเว็บขายของเองอีกที่หนึ่ง
+        </p>
+        <p>
+          สิ่งที่ผมสนใจจริงๆ ไม่ใช่การ "สั่ง AI ให้ทำงานแทน" แต่เป็น
+          <strong>การออกแบบระบบที่ทำให้ผลลัพธ์เชื่อถือได้</strong> —
+          ตั้งสมมติฐาน ทดสอบด้วยโจทย์ที่รู้คำตอบ ดูว่าพังตรงไหน แล้วแก้
+          ซึ่งผมว่ามันเป็นวิธีคิดเดียวกับที่ใช้ในการทดลองวิทยาศาสตร์
+          แค่เปลี่ยนจากหลอดทดลองเป็นโค้ดเท่านั้นเอง
+        </p>
+      </div>
+
+      <aside class="about__side" data-reveal>
+        <div class="card card--fact">
+          <h3>ข้อมูลโดยย่อ</h3>
+          <dl class="kv">
+            <div><dt>ชื่อ</dt><dd>อิสระพัฒ ชัยเสรี<br><span class="muted">Itsarapat Chaiseree</span></dd></div>
+            <div><dt>ระดับชั้น</dt><dd>มัธยมศึกษาตอนต้น</dd></div>
+            <div><dt>สนใจ</dt><dd>AI Engineering, Web Development, การออกแบบระบบ</dd></div>
+            <div><dt>เป้าหมาย</dt><dd>เรียนต่อสายคอมพิวเตอร์ / เทคโนโลยีดิจิทัล</dd></div>
+            <div><dt>ผลงานออนไลน์</dt><dd><a href="https://velo-official.github.io/putssr-shop/#products" target="_blank" rel="noopener">Put SSR.SHOP ↗</a></dd></div>
+          </dl>
+        </div>
+        <blockquote class="quote">
+          “เครื่องมือที่ดี ต้องพิสูจน์ได้ว่ามันถูก ไม่ใช่แค่ฟังดูถูก”
+        </blockquote>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 02 · SKILLS ══════════ -->
+<section id="skills" class="sec sec--alt">
+  <div class="wrap">
+    <header class="sec__head" data-reveal>
+      <p class="sec__no">§ 02</p>
+      <h2 class="sec__title">ทักษะ</h2>
+      <p class="sec__sub">ระดับความชำนาญประเมินจากงานที่เคยทำเสร็จจริง ไม่ใช่จำนวนคอร์สที่ดู</p>
+    </header>
+
+    <div class="skgrid">
+
+      <article class="skcard" data-reveal>
+        <div class="skcard__top">
+          <span class="skcard__ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 6l-5 6 5 6M15 6l5 6-5 6"/></svg>
+          </span>
+          <div>
+            <h3>การเขียนโปรแกรม</h3>
+            <p class="skcard__desc">เขียนโปรแกรมเพื่อแก้ปัญหาจริง ตั้งแต่สคริปต์เล็กๆ จนถึงหน้าเว็บที่ deploy แล้ว</p>
+          </div>
+        </div>
+        <ul class="bars">
+          <li>
+            <div class="bars__label"><span>Python</span><span class="bars__lv">ใช้งานคล่อง</span></div>
+            <div class="bar"><span style="--v:78%"></span></div>
+            <p class="bars__note">ตรวจคำตอบคณิตด้วย <code>sympy</code>, สคริปต์ประมวลผลข้อมูล</p>
+          </li>
+          <li>
+            <div class="bars__label"><span>JavaScript</span><span class="bars__lv">ใช้งานได้ดี</span></div>
+            <div class="bar"><span style="--v:68%"></span></div>
+            <p class="bars__note">ทำเว็บให้โต้ตอบได้ — filter, scroll-spy, theme toggle</p>
+          </li>
+          <li>
+            <div class="bars__label"><span>HTML / CSS</span><span class="bars__lv">ถนัด</span></div>
+            <div class="bar"><span style="--v:85%"></span></div>
+            <p class="bars__note">เขียนเองทั้งหมดโดยไม่พึ่งเทมเพลตสำเร็จรูป</p>
+          </li>
+        </ul>
+      </article>
+
+      <article class="skcard" data-reveal>
+        <div class="skcard__top">
+          <span class="skcard__ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3l2.2 4.8L19 10l-4.8 2.2L12 17l-2.2-4.8L5 10l4.8-2.2z"/><path d="M18.5 16.5l.9 2 2 .9-2 .9-.9 2-.9-2-2-.9 2-.9z"/></svg>
+          </span>
+          <div>
+            <h3>ออกแบบ AI Skills / Prompt Engineering</h3>
+            <p class="skcard__desc">ทักษะหลักของผม — ทำให้ AI ทำงานเฉพาะทางได้แม่นและสม่ำเสมอ</p>
+          </div>
+        </div>
+        <ul class="bars">
+          <li>
+            <div class="bars__label"><span>เขียน Skill Description ให้ trigger ถูกตัว</span><span class="bars__lv">ถนัด</span></div>
+            <div class="bar"><span style="--v:88%"></span></div>
+            <p class="bars__note">ระบุคำที่ผู้ใช้พิมพ์จริง ไม่ใช่คำที่เราคิดว่าเขาจะพิมพ์</p>
+          </li>
+          <li>
+            <div class="bars__label"><span>ออกแบบชุดทดสอบ (Test Set)</span><span class="bars__lv">ใช้งานคล่อง</span></div>
+            <div class="bar"><span style="--v:80%"></span></div>
+            <p class="bars__note">สร้างโจทย์ที่รู้คำตอบล่วงหน้าเพื่อวัดว่า skill ตอบถูกจริง</p>
+          </li>
+          <li>
+            <div class="bars__label"><span>บังคับให้ AI ตรวจงานตัวเอง</span><span class="bars__lv">ใช้งานคล่อง</span></div>
+            <div class="bar"><span style="--v:82%"></span></div>
+            <p class="bars__note">ให้รันโค้ดยืนยันคำตอบก่อนตอบผู้ใช้ ลดการมั่ว</p>
+          </li>
+        </ul>
+      </article>
+
+      <article class="skcard" data-reveal>
+        <div class="skcard__top">
+          <span class="skcard__ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M7 13h6"/></svg>
+          </span>
+          <div>
+            <h3>ออกแบบเว็บ &amp; UX/UI เบื้องต้น</h3>
+            <p class="skcard__desc">คิดจากคนที่จะเข้ามาดู ไม่ใช่จากสิ่งที่ตัวเองอยากโชว์</p>
+          </div>
+        </div>
+        <ul class="bars">
+          <li>
+            <div class="bars__label"><span>Responsive / Mobile-first</span><span class="bars__lv">ถนัด</span></div>
+            <div class="bar"><span style="--v:84%"></span></div>
+            <p class="bars__note">ออกแบบจากจอมือถือก่อน แล้วค่อยขยายขึ้นจอใหญ่</p>
+          </li>
+          <li>
+            <div class="bars__label"><span>ระบบสี &amp; Typography</span><span class="bars__lv">ใช้งานได้ดี</span></div>
+            <div class="bar"><span style="--v:72%"></span></div>
+            <p class="bars__note">ใช้ตัวแปร CSS วางระบบ ไม่ hard-code สีทีละจุด</p>
+          </li>
+          <li>
+            <div class="bars__label"><span>เขียน Copy ที่ขายของได้</span><span class="bars__lv">กำลังพัฒนา</span></div>
+            <div class="bar"><span style="--v:60%"></span></div>
+            <p class="bars__note">เรียนจากการเขียนหน้าขายจริงแล้วดูว่าคนอ่านแล้วเข้าใจไหม</p>
+          </li>
+        </ul>
+      </article>
+
+    </div>
+
+    <div class="toolbelt" data-reveal>
+      <p class="toolbelt__lb">เครื่องมือที่ใช้ประจำ</p>
+      <ul>
+        <li>Python</li><li>JavaScript</li><li>HTML5</li><li>CSS3</li>
+        <li>Claude Skills</li><li>Git &amp; GitHub</li><li>GitHub Pages</li>
+        <li>VS Code</li><li>SymPy</li><li>python-pptx</li><li>Figma (เบื้องต้น)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 03 · PROJECTS ══════════ -->
+<section id="projects" class="sec">
+  <div class="wrap">
+    <header class="sec__head" data-reveal>
+      <p class="sec__no">§ 03</p>
+      <h2 class="sec__title">โปรเจ็คเด่น</h2>
+      <p class="sec__sub">สองโปรเจ็คนี้ต่อกัน — โปรเจ็คแรกคือ "สินค้า" โปรเจ็คที่สองคือ "ธุรกิจที่ขายสินค้านั้น"</p>
+    </header>
+
+    <!-- ─── PROJECT 01 ─── -->
+    <article class="proj" data-reveal>
+      <div class="proj__head">
+        <span class="proj__no">PROJECT 01</span>
+        <h3 class="proj__title">ทีม AI Skills 8 ตัวสำหรับ Claude</h3>
+        <ul class="tags">
+          <li>Prompt Engineering</li><li>Python</li><li>System Design</li><li>Testing</li>
+        </ul>
+      </div>
+
+      <div class="prob">
+        <div class="prob__col prob__col--bad">
+          <p class="prob__lb">ปัญหา</p>
+          <h4>Claude เก่ง แต่ "เก่งกว้างๆ"</h4>
+          <p>ถามโจทย์ที่ต้องแม่นยำ มันมักตอบแบบให้แนวทาง ไม่ตรวจทานคำตอบซ้ำ
+             บางครั้งคำนวณผิดโดยไม่รู้ตัว และไม่ส่งไฟล์งานจริงให้</p>
+          <p class="quotebox">“x ≈ −0.5 หรือ 3 น่าจะประมาณนี้ครับ ลองตรวจดูอีกทีนะ”</p>
+        </div>
+        <div class="prob__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+        </div>
+        <div class="prob__col prob__col--good">
+          <p class="prob__lb">สิ่งที่ผมสร้าง</p>
+          <h4>Skill ที่บังคับให้มีกระบวนการ</h4>
+          <p>แต่ละ skill คือชุดคำสั่งที่กำหนดขั้นตอนการทำงาน มาตรฐานผลลัพธ์
+             และบังคับให้ตรวจทานก่อนตอบ — เปลี่ยน AI ทั่วไปเป็นผู้เชี่ยวชาญเฉพาะทาง</p>
+          <p class="quotebox quotebox--ok">“x = −1/2 หรือ x = 3 (ตรวจสอบด้วย Python แล้ว ถูกต้อง 100%)”</p>
+        </div>
+      </div>
+
+      <!-- 8 skills -->
+      <div class="skills8">
+        <div class="skills8__bar">
+          <h4>Skill ทั้ง 8 ตัว</h4>
+          <div class="filters" role="group" aria-label="กรองตามหมวดหมู่">
+            <button class="chip is-on" data-f="all" type="button">ทั้งหมด <i>8</i></button>
+            <button class="chip" data-f="edu" type="button">วิชาการ <i>4</i></button>
+            <button class="chip" data-f="tool" type="button">เครื่องมือทำงาน <i>3</i></button>
+            <button class="chip" data-f="life" type="button">วางแผนชีวิต <i>1</i></button>
+          </div>
+        </div>
+
+        <ul class="s8" id="s8">
+          <li class="s8__i" data-cat="edu">
+            <div class="s8__hd"><code>math-genius</code><span class="s8__price">179฿</span></div>
+            <p class="s8__role">ติวเตอร์คณิตศาสตร์</p>
+            <p class="s8__desc">เชี่ยวชาญคณิต ม.ต้นเป็นพิเศษ ครอบคลุมถึงระดับมหาวิทยาลัย จุดเด่นคือ <b>ตรวจคำตอบด้วย Python จริงทุกข้อ</b> ก่อนส่งกลับ</p>
+          </li>
+          <li class="s8__i" data-cat="edu">
+            <div class="s8__hd"><code>english-master</code><span class="s8__price">179฿</span></div>
+            <p class="s8__role">ครูภาษาอังกฤษ</p>
+            <p class="s8__desc">เขียน ตรวจ และแปลได้ทุกระดับ ตรวจแกรมมาละเอียดพร้อมบอกเหตุผล แปลไทย–อังกฤษสองทาง</p>
+          </li>
+          <li class="s8__i" data-cat="edu">
+            <div class="s8__hd"><code>science-genius</code><span class="s8__price">199฿</span></div>
+            <p class="s8__role">วิทยาศาสตร์เชิงลึก</p>
+            <p class="s8__desc">อิงหลักสูตร "จีเนียไจแอนท์" ที่ลึกกว่าปกติ ครอบคลุมฟิสิกส์ เคมี ชีววิทยา และทำ mind map สรุปให้ได้</p>
+          </li>
+          <li class="s8__i" data-cat="edu">
+            <div class="s8__hd"><code>science-lab</code><span class="s8__price">149฿</span></div>
+            <p class="s8__role">รายงานปฏิบัติการวิทยาศาสตร์</p>
+            <p class="s8__desc">เขียนรายงานการทดลอง <b>ครบ 13 หัวข้อมาตรฐาน</b> แยกตัวแปรต้น–ตาม–ควบคุมถูกต้อง พร้อมช่วยแปลผลกราฟและค่าคลาดเคลื่อน</p>
+          </li>
+          <li class="s8__i" data-cat="tool">
+            <div class="s8__hd"><code>code-master</code><span class="s8__price">229฿</span></div>
+            <p class="s8__role">สอน + เขียนโค้ด Python / JS / C++</p>
+            <p class="s8__desc">รวมโปรแกรมเมอร์ระดับ senior กับครูสอนโค้ดไว้ในไฟล์เดียว แปล error message เป็นภาษาคน และรีวิวโค้ดที่เขียนมาแล้วได้</p>
+          </li>
+          <li class="s8__i" data-cat="tool">
+            <div class="s8__hd"><code>web-pro</code><span class="s8__price">249฿</span></div>
+            <p class="s8__role">ที่ปรึกษาธุรกิจเว็บ + ฟรีแลนซ์</p>
+            <p class="s8__desc">ทำเว็บได้ระดับที่ขายลูกค้าได้จริง พ่วงคำแนะนำเรื่องตั้งราคา ขอบเขตงาน SEO และการเอาเว็บขึ้นออนไลน์</p>
+          </li>
+          <li class="s8__i" data-cat="tool">
+            <div class="s8__hd"><code>slide-master</code><span class="s8__price">199฿</span></div>
+            <p class="s8__role">สร้างสไลด์นำเสนอ .pptx จริง</p>
+            <p class="s8__desc">จัดโครงเรื่อง เลือก layout และ <b>ส่งออกเป็นไฟล์ .pptx ที่เปิดใน PowerPoint ได้ทันที</b> ไม่ใช่แค่ข้อความให้ไปทำต่อ</p>
+          </li>
+          <li class="s8__i" data-cat="life">
+            <div class="s8__hd"><code>life-advisor</code><span class="s8__price">149฿</span></div>
+            <p class="s8__role">ที่ปรึกษารอบด้าน</p>
+            <p class="s8__desc">ช่วยตัดสินใจ วางแผนอนาคต และจัดการเวลาอย่างเป็นระบบ ตอบตรงไม่กำกวม</p>
+          </li>
+        </ul>
+        <p class="s8__empty" id="s8Empty" hidden>ไม่มี skill ในหมวดนี้</p>
+      </div>
+
+      <!-- evidence -->
+      <div class="evi">
+        <h4 class="evi__h">ตัวอย่างผลลัพธ์จริงจากการทดสอบ</h4>
+
+        <div class="evi__grid">
+          <div class="evi__card">
+            <p class="evi__tag">math-genius</p>
+            <h5>ตรวจคำตอบด้วยโค้ด ไม่ใช่เดาจากความจำ</h5>
+            <p>ทุกโจทย์ที่มีคำตอบเป็นตัวเลข skill จะสั่งให้รันการคำนวณผ่าน Python
+               เพื่อยืนยันคำตอบก่อนส่งกลับ ลดข้อผิดพลาดที่พบบ่อยใน AI ทั่วไป</p>
+            <pre class="code"><code><span class="c">verify.py</span>
+<span class="k">from</span> sympy <span class="k">import</span> symbols, solve
+x = symbols(<span class="s">'x'</span>)
+eq = 2*x**2 - 5*x - 3
+solve(eq, x)
+<span class="c"># ผลลัพธ์: [-1/2, 3]  ✓ ตรงกับคำตอบที่แสดงให้ผู้เรียน</span></code></pre>
+            <p class="evi__ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg> ผ่านการตรวจซ้ำด้วยโค้ดทุกครั้ง</p>
+          </div>
+
+          <div class="evi__card">
+            <p class="evi__tag">slide-master</p>
+            <h5>สั่งครั้งเดียว ได้ไฟล์ .pptx พร้อมนำเสนอ</h5>
+            <p>บอกหัวข้อและเนื้อหาคร่าวๆ skill จะจัดโครงเรื่อง เลือก layout ที่เหมาะกับแต่ละสไลด์
+               แล้วส่งออกเป็นไฟล์ PowerPoint จริงให้ดาวน์โหลดไปใช้ต่อได้ทันที</p>
+            <div class="slides" aria-label="ภาพจำลองผลลัพธ์สไลด์">
+              <div class="slide slide--title"><b>ระบบนิเวศ</b><i>โครงงานวิทยาศาสตร์ ม.3</i></div>
+              <div class="slide"><u></u><s></s><s></s><s class="short"></s></div>
+              <div class="slide slide--chart">
+                <svg viewBox="0 0 60 34" aria-hidden="true">
+                  <rect x="4" y="18" width="8" height="14"/><rect x="17" y="10" width="8" height="22"/>
+                  <rect x="30" y="14" width="8" height="18"/><rect x="43" y="5" width="8" height="27"/>
+                </svg>
+              </div>
+            </div>
+            <p class="evi__ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg> ได้ไฟล์ .pptx ใช้งานได้จริง ไม่ใช่แค่ข้อความ</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- process -->
+      <div class="proc">
+        <h4 class="proc__h">กระบวนการทำงาน</h4>
+        <p class="proc__sub">ผมไม่ได้ "สั่งแล้วจบ" — แต่ละ skill ผ่านวงจรนี้หลายรอบกว่าจะปล่อยออกมา</p>
+        <ol class="steps">
+          <li>
+            <span class="steps__n">01</span>
+            <h5>ออกแบบ</h5>
+            <p>กำหนดว่า skill นี้ต้องเก่งเรื่องอะไร ผลลัพธ์หน้าตาแบบไหนถึงเรียกว่า "ใช้ได้"
+               แล้วเขียน description ด้วยคำที่ผู้ใช้จริงจะพิมพ์ เพื่อให้ Claude เรียกถูกตัว</p>
+          </li>
+          <li>
+            <span class="steps__n">02</span>
+            <h5>สร้างชุดโจทย์ทดสอบเอง</h5>
+            <p>เขียนโจทย์ที่ <b>ผมรู้คำตอบอยู่แล้ว</b> คละระดับง่าย–ยาก
+               รวมถึงเคสหลอกที่ AI มักพลาด เช่น โจทย์ที่มีคำตอบสองค่า หรือคำถามที่กำกวม</p>
+          </li>
+          <li>
+            <span class="steps__n">03</span>
+            <h5>ทดสอบและจดผลจริง</h5>
+            <p>รันโจทย์ทั้งชุดแล้วบันทึกว่าข้อไหนผิด ผิดเพราะอะไร —
+               คำนวณพลาด อ่านโจทย์ผิด หรือหลุดฟอร์แมตที่กำหนดไว้</p>
+          </li>
+          <li>
+            <span class="steps__n">04</span>
+            <h5>แก้บั๊กจากผลทดสอบ</h5>
+            <p>แก้ที่ต้นเหตุ เช่น เพิ่มขั้นตอนบังคับให้ตรวจคำตอบด้วย Python
+               หรือระบุโครงสร้างผลลัพธ์ให้ชัดขึ้น แล้ววนกลับไปทดสอบใหม่ทั้งชุด</p>
+          </li>
+        </ol>
+        <div class="learned">
+          <p class="learned__lb">สิ่งที่ได้เรียนรู้</p>
+          <p>บทเรียนใหญ่ที่สุดคือ <b>"ถ้าวัดผลไม่ได้ ก็ปรับปรุงไม่ได้"</b>
+             ตอนแรกผมแก้ prompt ตามความรู้สึกว่า "น่าจะดีขึ้น" ซึ่งไม่มีทางรู้เลยว่าดีขึ้นจริงไหม
+             พอเปลี่ยนมาใช้ชุดโจทย์เดิมทดสอบทุกรอบ ผมถึงเห็นตัวเลขชัดๆ ว่าการแก้แต่ละครั้งช่วยหรือทำให้แย่ลง</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- ─── PROJECT 02 ─── -->
+    <article class="proj proj--b" data-reveal>
+      <div class="proj__head">
+        <span class="proj__no">PROJECT 02</span>
+        <h3 class="proj__title">Put SSR.SHOP — เว็บขาย AI Skills</h3>
+        <ul class="tags">
+          <li>HTML / CSS / JS</li><li>UX Writing</li><li>Pricing Strategy</li><li>GitHub Pages</li>
+        </ul>
+      </div>
+
+      <div class="p2">
+        <div class="p2__text">
+          <p class="lead">เว็บธุรกิจจริงที่ผมสร้างขึ้นเพื่อขายโปรเจ็คแรก — ไม่ใช่เว็บฝึกหัดที่จบอยู่ในเครื่องตัวเอง</p>
+          <p>
+            หลังจากทำ skill ทั้ง 8 ตัวเสร็จ ผมคิดว่าถ้ามันมีประโยชน์กับผมจริง
+            มันก็น่าจะมีประโยชน์กับนักเรียนคนอื่นเหมือนกัน คำถามคือ
+            "แล้วจะทำยังไงให้คนที่ไม่รู้จักผมเลยกล้าจ่ายเงิน" — ซึ่งเป็นโจทย์คนละแบบกับการเขียนโค้ด
+          </p>
+          <p>
+            ผมเลยวางโครงเว็บโดยเรียงจาก <b>ปัญหา → ทางแก้ → หลักฐาน → ราคา → คำถามที่ค้างใจ → ช่องทางสั่งซื้อ</b>
+            เพราะคนที่เพิ่งเข้ามาจะยังไม่เชื่อเรา ต้องให้เขาเห็นก่อนว่าเราเข้าใจปัญหาของเขา
+            แล้วค่อยพิสูจน์ด้วยตัวอย่างผลลัพธ์จริง ก่อนจะพูดเรื่องเงิน
+          </p>
+
+          <a class="btn btn--primary" href="https://velo-official.github.io/putssr-shop/#products" target="_blank" rel="noopener">
+            เปิดเว็บจริง putssr-shop
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+          </a>
+          <p class="p2__url"><code>velo-official.github.io/putssr-shop</code> · สถานะ: <b class="live">ออนไลน์แล้ว</b></p>
+        </div>
+
+        <div class="p2__shot">
+          <div class="browser" aria-label="ภาพตัวอย่างหน้าเว็บ Put SSR.SHOP">
+            <div class="browser__bar">
+              <span class="browser__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="browser__url">velo-official.github.io/putssr-shop</span>
+            </div>
+            <div class="browser__view">
+              <p class="bv__eyebrow">SKILL FILES สำหรับ CLAUDE</p>
+              <p class="bv__h1">Claude ตอบทั่วไปพอแล้ว<br><span>ให้มันเป็น ผู้เชี่ยวชาญจริง</span></p>
+              <p class="bv__p">รวม Skill Files 8 ตัวที่ฝึก Claude ให้ลึกเฉพาะทาง</p>
+              <div class="bv__btns"><span class="bv__b1">ดูสินค้าทั้ง 8 ตัว</span><span class="bv__b2">ทักไลน์สอบถาม</span></div>
+              <div class="bv__cards">
+                <span>math-genius<br><b>179฿</b></span>
+                <span>code-master<br><b>229฿</b></span>
+                <span>web-pro<br><b>249฿</b></span>
+              </div>
+            </div>
+          </div>
+          <p class="p2__cap">ภาพจำลองหน้าแรก — กดปุ่มด้านซ้ายเพื่อเปิดเว็บจริง</p>
+        </div>
+      </div>
+
+      <div class="biz">
+        <h4 class="biz__h">การคิดเชิงธุรกิจเบื้องหลังเว็บนี้</h4>
+        <div class="biz__grid">
+          <div class="biz__c">
+            <p class="biz__lb">กลุ่มเป้าหมาย</p>
+            <h5>นักเรียน ม.ต้น–ม.ปลาย ที่ใช้ AI อยู่แล้ว</h5>
+            <p>ไม่ใช่คนที่ไม่เคยใช้ AI เลย เพราะกลุ่มนั้นต้องใช้แรงอธิบายเยอะเกินไป
+               ผมเลือกคนที่ <b>ใช้อยู่แล้วแต่ยังไม่พอใจผลลัพธ์</b> เพราะเขาเข้าใจปัญหาทันทีโดยไม่ต้องโน้มน้าว</p>
+          </div>
+          <div class="biz__c">
+            <p class="biz__lb">การตั้งราคา</p>
+            <h5>149–249 บาทต่อตัว · ครบชุด 899 บาท</h5>
+            <p>ตั้งราคารายตัวตามความลึกและเวลาที่ใช้สร้าง (<code>web-pro</code> 249฿ แพงสุดเพราะครอบคลุมทั้งโค้ดและธุรกิจ)
+               ส่วนแพ็กครบชุดตั้งไว้ 899 บาท จากราคาเต็ม 1,532 บาท</p>
+            <div class="bundle">
+              <div class="bundle__row"><span>ซื้อแยกครบ 8 ตัว</span><span class="strike">1,532฿</span></div>
+              <div class="bundle__row bundle__row--hl"><span>แพ็กครบชุด</span><span>899฿</span></div>
+              <div class="bundle__bar"><span style="--v:41%"></span></div>
+              <p class="bundle__note">ประหยัด 633 บาท (41%) — ตั้งใจให้ส่วนต่างมากพอที่คนจะเลือกแพ็กรวม ซึ่งทำให้ยอดต่อออเดอร์สูงขึ้น</p>
+            </div>
+          </div>
+          <div class="biz__c">
+            <p class="biz__lb">การส่งมอบ &amp; บริการ</p>
+            <h5>สั่งผ่าน LINE · ได้ไฟล์ .zip ทันที</h5>
+            <p>เลือกช่องทางที่คนไทยคุ้นที่สุดแทนการทำระบบตะกร้าเต็มรูปแบบ เพราะยอดขายช่วงแรกยังไม่คุ้มกับความซับซ้อน
+               และเพิ่มคู่มือติดตั้ง 4 ขั้นตอน + FAQ บนหน้าเว็บเพื่อลดคำถามซ้ำ</p>
+          </div>
+        </div>
+        <div class="learned">
+          <p class="learned__lb">สิ่งที่ได้เรียนรู้</p>
+          <p>การทำเว็บขายของสอนผมว่า <b>โค้ดที่ดีไม่ได้แปลว่าขายได้</b>
+             ตอนแรกผมเขียนหน้าเว็บโดยเริ่มจากอวดว่า skill ทำอะไรได้บ้าง แล้วรู้สึกว่ามันไม่น่าเชื่อถือ
+             พอย้ายส่วน "ปัญหา" กับ "หลักฐานผลลัพธ์จริง" ขึ้นมาก่อนราคา หน้าเว็บก็อ่านแล้วเข้าใจง่ายขึ้นเยอะ</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ══════════ 04 · JOURNEY ══════════ -->
+<section id="journey" class="sec sec--alt">
+  <div class="wrap">
+    <header class="sec__head" data-reveal>
+      <p class="sec__no">§ 04</p>
+      <h2 class="sec__title">เส้นทางการเรียนรู้</h2>
+      <p class="sec__sub">ผลงานทั้งหมดไม่ได้เกิดในคืนเดียว — นี่คือลำดับที่มันค่อยๆ ต่อกันขึ้นมา</p>
+    </header>
+
+    <ol class="tl">
+      <li data-reveal>
+        <span class="tl__dot" aria-hidden="true"></span>
+        <p class="tl__when">ม.1</p>
+        <h3>เริ่มจากความสงสัย</h3>
+        <p>ใช้คอมพิวเตอร์ทุกวันจนเริ่มสงสัยว่าโปรแกรมที่เราใช้อยู่มันทำงานยังไง
+           เลยลองเขียน Python ตามคลิปสอน เริ่มจากโปรแกรมทายเลขและเครื่องคิดเลขง่ายๆ</p>
+      </li>
+      <li data-reveal>
+        <span class="tl__dot" aria-hidden="true"></span>
+        <p class="tl__when">ม.2</p>
+        <h3>จากโค้ดเล่นๆ เป็นโค้ดที่ใช้ได้</h3>
+        <p>เปลี่ยนจากทำตามคลิป มาเขียนสคริปต์แก้ปัญหาของตัวเองจริงๆ
+           และเริ่มหัด HTML/CSS จนทำหน้าเว็บแรกได้สำเร็จ</p>
+      </li>
+      <li data-reveal>
+        <span class="tl__dot" aria-hidden="true"></span>
+        <p class="tl__when">ม.2 – ม.3</p>
+        <h3>ค้นพบว่า "คำสั่งที่ดี" เปลี่ยนผลลัพธ์ได้จริง</h3>
+        <p>เริ่มศึกษา Prompt Engineering และระบบ Skills ของ Claude อย่างจริงจัง
+           เขียน skill ตัวแรกคือ <code>math-genius</code> แล้วพบว่ามันยังคำนวณพลาด
+           จึงเริ่มทำชุดโจทย์ทดสอบเป็นครั้งแรก</p>
+      </li>
+      <li data-reveal>
+        <span class="tl__dot" aria-hidden="true"></span>
+        <p class="tl__when">ม.3</p>
+        <h3>ขยายเป็นทีม 8 skills พร้อมกระบวนการทดสอบ</h3>
+        <p>ต่อยอดจาก skill เดียวเป็น 8 ตัวครอบคลุมทั้งวิชาการ เครื่องมือทำงาน และการวางแผน
+           พร้อมวางวงจร ออกแบบ → ทดสอบ → แก้ ให้ใช้ได้กับทุกตัวเหมือนกัน</p>
+      </li>
+      <li data-reveal>
+        <span class="tl__dot" aria-hidden="true"></span>
+        <p class="tl__when">ม.3 · ปัจจุบัน</p>
+        <h3>เปิด Put SSR.SHOP ออนไลน์จริง</h3>
+        <p>ออกแบบและเขียนเว็บขายเองทั้งหมด ตั้งราคา วางกลุ่มเป้าหมาย
+           แล้ว deploy ขึ้น GitHub Pages ให้คนทั่วไปเข้าถึงได้จริง</p>
+      </li>
+      <li class="tl__next" data-reveal>
+        <span class="tl__dot" aria-hidden="true"></span>
+        <p class="tl__when">ถัดไป</p>
+        <h3>เรียนต่อสายคอมพิวเตอร์ / เทคโนโลยีดิจิทัล</h3>
+        <p>อยากเรียนพื้นฐานให้แน่นอย่างเป็นระบบ ในที่ที่มีครูและเพื่อนที่สนใจเรื่องเดียวกัน</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════ 05 · FUTURE ══════════ -->
+<section id="future" class="sec">
+  <div class="wrap">
+    <header class="sec__head" data-reveal>
+      <p class="sec__no">§ 05</p>
+      <h2 class="sec__title">เป้าหมายอนาคต</h2>
+    </header>
+
+    <div class="goals">
+      <article class="goal" data-reveal>
+        <p class="goal__when">ระยะสั้น · 1–2 ปี</p>
+        <h3>ปิดช่องว่างพื้นฐานให้แน่น</h3>
+        <ul class="ticks">
+          <li>เรียนโครงสร้างข้อมูลและอัลกอริทึมอย่างเป็นระบบ ไม่ใช่เรียนเฉพาะตอนต้องใช้</li>
+          <li>ใช้ Git และการเขียนเทสต์ให้เป็นนิสัย ไม่ใช่แค่พอใช้เป็น</li>
+          <li>ลงแข่งเขียนโปรแกรมเพื่อวัดตัวเองกับคนอื่นจริงๆ</li>
+          <li>เรียนภาษาอังกฤษเชิงเทคนิคให้อ่านเอกสารต้นฉบับได้คล่อง</li>
+        </ul>
+      </article>
+
+      <article class="goal" data-reveal>
+        <p class="goal__when">ระยะกลาง · ช่วง ม.ปลาย</p>
+        <h3>สร้างของที่มีผู้ใช้จริงมากกว่านี้</h3>
+        <ul class="ticks">
+          <li>เรียนต่อสายคอมพิวเตอร์ / เทคโนโลยีดิจิทัล ที่เน้นการลงมือทำโครงงาน</li>
+          <li>ขยายจาก front-end ไปเรียน back-end และฐานข้อมูลให้ทำระบบครบวงจรได้</li>
+          <li>พัฒนา Put SSR.SHOP ต่อให้มีระบบสั่งซื้อและส่งไฟล์อัตโนมัติ</li>
+          <li>ทำโครงงานร่วมกับเพื่อน เพื่อฝึกทำงานเป็นทีมและใช้ version control จริง</li>
+        </ul>
+      </article>
+
+      <article class="goal goal--long" data-reveal>
+        <p class="goal__when">ระยะยาว</p>
+        <h3>เป็นวิศวกรที่สร้างเครื่องมือให้คนไทยใช้ได้จริง</h3>
+        <p>เป้าหมายของผมคือการเป็น AI / Software Engineer ที่ทำเครื่องมือด้านการศึกษา —
+           เพราะสิ่งที่ผมทำมาทั้งหมดเริ่มจากปัญหาของนักเรียนคนหนึ่งที่อยากเรียนให้เข้าใจจริงๆ
+           และผมเชื่อว่ายังมีนักเรียนอีกมากที่เจอปัญหาเดียวกันแต่ยังไม่มีเครื่องมือที่ดีพอ</p>
+      </article>
+
+      <article class="goal goal--why" data-reveal>
+        <p class="goal__when">ทำไมถึงอยากเข้าหลักสูตรนี้</p>
+        <h3>สิ่งที่ผมทำเองได้ มาถึงเพดานแล้ว</h3>
+        <p>ที่ผ่านมาผมเรียนรู้จากอินเทอร์เน็ตเป็นหลัก ซึ่งพาผมมาได้ไกลระดับหนึ่ง
+           แต่ผมรู้ตัวว่าความรู้ที่ได้ยังเป็นหลุมเป็นบ่อ — เก่งบางเรื่องมาก แต่ขาดพื้นฐานบางเรื่องไปเลย</p>
+        <p>สิ่งที่ผมต้องการจากหลักสูตรนี้คือ <b>ครูที่ชี้จุดบอดที่ผมมองไม่เห็นเอง</b>
+           เพื่อนที่สนใจเรื่องเดียวกันจนคุยกันรู้เรื่อง และโจทย์ที่ยากกว่าที่ผมตั้งให้ตัวเองได้
+           ผมพร้อมเริ่มจากศูนย์ใหม่ในเรื่องที่ยังไม่รู้ และมีผลงานที่พิสูจน์แล้วว่าถ้าเริ่มอะไรผมจะทำจนเสร็จ</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 06 · CONTACT ══════════ -->
+<section id="contact" class="sec sec--contact">
+  <div class="wrap">
+    <header class="sec__head" data-reveal>
+      <p class="sec__no">§ 06</p>
+      <h2 class="sec__title">ติดต่อ</h2>
+      <p class="sec__sub">ยินดีมากครับถ้ามีคำถามเพิ่มเติมเกี่ยวกับผลงาน หรืออยากให้สาธิตการใช้งานจริง</p>
+    </header>
+
+    <div class="ct" data-reveal>
+      <div class="ct__main">
+        <p class="ct__lb">อีเมล</p>
+        <div class="ct__mailrow">
+          <a class="ct__mail" href="mailto:itsarapat.chaiseree@gmail.com">itsarapat.chaiseree@gmail.com</a>
+          <button class="copy" id="copyBtn" type="button" data-copy="itsarapat.chaiseree@gmail.com">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8"/></svg>
+            <span>คัดลอก</span>
+          </button>
+        </div>
+        <p class="ct__hint">ตอบกลับภายใน 24 ชั่วโมง</p>
+      </div>
+
+      <ul class="ct__links">
+        <li>
+          <a href="https://velo-official.github.io/putssr-shop/#products" target="_blank" rel="noopener">
+            <span class="ct__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h16l-1.2 11a2 2 0 0 1-2 1.8H7.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></span>
+            <span class="ct__t"><b>Put SSR.SHOP</b><i>เว็บผลงานที่ออนไลน์จริง</i></span>
+            <span class="ct__go" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/velo-official" target="_blank" rel="noopener">
+            <span class="ct__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.9c0-1.1.1-1.6-.6-2.2 3-.3 5.6-1.5 5.6-6a4.7 4.7 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.1 5.4 2.4 5.4 2.4a4.3 4.3 0 0 0-.1 3.2A4.7 4.7 0 0 0 4 8.8c0 4.5 2.6 5.7 5.6 6-.4.4-.6.9-.6 1.6V20"/></svg></span>
+            <span class="ct__t"><b>GitHub</b><i>github.com/velo-official</i></span>
+            <span class="ct__go" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://line.me/ti/p/7MB7ho1O30" target="_blank" rel="noopener">
+            <span class="ct__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 10.4c0-4.1-4-7.4-9-7.4s-9 3.3-9 7.4c0 3.7 3.2 6.8 7.5 7.3.3.1.7.2.8.5.1.3.1.6 0 .9l-.1.8c0 .3-.2 1 .9.6s5.9-3.5 8-6c1.3-1.4 1.9-2.9 1.9-4.1z"/></svg></span>
+            <span class="ct__t"><b>LINE</b><i>ช่องทางสอบถามเรื่องผลงาน</i></span>
+            <span class="ct__go" aria-hidden="true">↗</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p class="foot__name">อิสระพัฒ ชัยเสรี · Itsarapat Chaiseree</p>
+    <p class="foot__meta">พอร์ตโฟลิโอส่วนตัว · ออกแบบและเขียนโค้ดเองทั้งหมด · <span id="year">2026</span></p>
+    <a class="foot__top" href="#hero">กลับขึ้นด้านบน ↑</a>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
